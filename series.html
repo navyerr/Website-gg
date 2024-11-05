@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Animation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Style for full-screen background canvas */
+        #pinkboard {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0; /* Background layer */
+        }
+
+        /* Navbar styling to stay on top */
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2; /* Higher z-index to stay above canvas */
+        }
+
+        .navbar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: pink;
+        }
+
+        .navbar a {
+            color: pink;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1em;
+            transition: color 0.3s, transform 0.2s;
+        }
+
+        .navbar a:hover {
+            color: #E50914;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 5px;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar with links -->
+        <div class="navbar">
+            <div class="logo">NETFLIX</div>
+            <nav>
+                <a href="micin.html">Home</a>
+                <a href="series.html">Series</a>
+                <a href="Puisi.html">Puisi</a>
+                <a href="lagu.html">Playlist Musik</a>
+            </nav>
+        </div>
+        
+        <!-- Canvas for Heart Animation -->
+        <canvas id="pinkboard"></canvas>
+    </div>
+
+    <!-- JavaScript for heart animation -->
+    <script src="scriptlove.js"></script>
+</body>
+</html>
